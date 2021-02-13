@@ -1,0 +1,272 @@
+@import 'general';
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  @import 'nav';
+  
+  .fondo-cuadro {
+    width: 100%;
+    height: 55vh;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top:0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+      background: #1a1a1a;    
+      background: linear-gradient(to right, hsla(107, 59%, 30%, 0.459), hsla(89, 33%, 22%, 0.658)), url(/imagenes/arboles.jpg);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+
+      h3{
+        color: white;
+        font-size: 30px;
+      }
+      p{
+        color: white;
+        font-weight: 200;
+      }
+      
+    
+   
+}
+  .julia {
+    padding: 10% 10% 5% 10% ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .imagen-julia img {
+    width: 40%;
+    width: 200px;
+  }
+  
+  .text-julia {
+    width: 60%;
+    text-align: center;
+  }
+  .text-julia h3 {
+    font-size: 18px;
+    color: #219653;
+  }
+  .text-julia h5 {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 3px 0;
+    color: $gray1;
+    border-bottom: 1px solid #E0E0E0;
+  }
+  .text-julia p {
+    font-size: 15px;
+    font-weight: 300;
+   
+  }
+  
+  /*PLANTA GIF */
+
+  .plants-import{
+      width: 100%;
+      padding:  5% ;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+     
+      h1{
+        text-align: center;
+        -webkit-text-stroke: 1px $verde1;
+              color: transparent; 
+      }
+     .before-p{
+        color: $gray5;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        margin:0 0 5% 0;
+         
+
+       }
+       .before-p::before{
+           content: "";
+           width: 50px;
+           height: 2px;
+           background-color: $verde1;
+           position: absolute;
+           bottom:-10px;
+       }
+    .group-plants{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        
+        position: relative;
+        
+        .text-plants{
+            width: 400px;
+            height: 170px;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            box-shadow:  0 0 $verde1 inset;
+            
+           
+            h5{
+              
+              color: $gray1;
+                font-size: 16px;
+                padding: 0 0 5px 0;
+                margin: 5px  0;
+                border-bottom: 1px solid #ccc;
+                text-align: center;
+               
+
+                
+            }
+            
+            p{
+                text-align: justify;
+                font-weight:200;
+                font-size: 15px;
+                color:$gray5;
+            }
+        }
+        .text-plants:hover{
+          transition: .5s ease-in-out ;
+          
+          box-shadow: 0 -300px $verde3 inset;
+          
+        }
+        .text-plants:hover p{
+          color: white;
+        }
+        .text-plants:hover  h5{
+          color: black;
+          border-bottom:1px solid  #2a8350; 
+          
+          
+        }
+
+        
+        
+    }
+  } 
+  
+  @import 'footer';
+
+  @media (min-width: 768px) and (max-width: 1024px){
+    
+
+    /*--------------------------JULIA----------------------*/
+    
+    .fondo-cuadro{
+      padding: 5%;
+      text-align: center;
+    }
+    .julia{
+      flex-direction: column;
+      margin: 10% 0;
+      
+      .imagen-julia img{
+        width: 170px;
+      }
+      .text-julia{
+        width: 100%;
+      }
+    }
+
+    /*PLANTA GIF */
+
+  .plants-import{
+    width: 100%;
+    padding:  5% 10% ;
+    text-align: center;
+
+  
+  .group-plants{
+  
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
+      .text-plants{
+        width: 100%;
+      }
+     
+      
+  }
+} 
+
+  }
+
+  @media (min-width: 320px) and (max-width: 480px){
+    .fondo-cuadro{
+      padding: 5%;
+      text-align: center;
+      
+      h3{
+        font-size: 20px;
+      }
+      p{
+        font-size: 13px;
+        color: #ccc;
+      }
+    }
+    .julia{
+      flex-direction: column;
+      margin: 10% 0;
+      
+      .imagen-julia img{
+        width: 170px;
+      }
+      .text-julia{
+        width: 100%;
+        p{
+          text-align: justify;
+          font-size: 14px;
+          font-weight: 400;
+          color: $gray1;
+        }
+      }
+    }
+
+    /*PLANTA GIF */
+
+  .plants-import{
+    width: 100%;
+    padding:  5% 10% ;
+    text-align: center;
+    .before-p{
+      color: black;
+    }
+  
+  .group-plants{
+  
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
+      .text-plants{
+        width: 100%;
+        height: auto;
+      }
+     
+      
+  }
+} 
+
+  
+  }
+  /*# sourceMappingURL=about.css.map */
+  

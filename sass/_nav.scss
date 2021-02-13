@@ -1,0 +1,186 @@
+nav {
+    display: flex;
+    
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 60px;
+    padding: 0 5%;
+    margin: 0;
+    z-index: 2;
+    
+    background-color: rgb(255, 255, 255);
+  }
+  
+  nav .bloqueUno {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+  
+    
+  }
+  .boton{
+    font-size: 23px;
+    margin-right: 5%;
+    visibility: hidden;
+  }
+  nav .bloqueDos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav .bloqueDos .list-uno {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  nav .bloqueDos .list-uno li {
+    margin: 0 10px;
+  }
+  nav .bloqueDos .list-uno li a {
+    text-decoration: none;
+    color: $gray5;
+    font-size: 13px;
+    padding: 10px;
+  }
+  nav .bloqueDos .list-uno li a:hover {
+    
+    transition: 0.5s;
+    border-radius: 10px;
+    color: black;
+  }
+  nav .bloqueDos .list-dos {
+    display: flex;
+    align-items: center;
+  }
+  nav .bloqueDos .list-dos li {
+    margin: 0 5px;
+  }
+  nav .bloqueDos .list-dos a {
+    color: $gray5;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  nav .bloqueDos .list-dos a:hover {
+    color: #219653;
+    transition: 0.5s;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px){
+    
+   
+    nav{
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width:100%;
+        background-color: white;
+        
+        
+        
+    }
+    .bloqueUno{
+     padding: 0 5%;
+     position: relative;
+         top: 5px;
+    }
+    .bloqueDos{
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+        position: relative;
+        top: 0;
+        transition: .5s ease-in-out;
+        z-index: -1;
+        border-top: 1px solid #ccc;
+        
+    }
+    .bloqueDos.show{
+      top: -500px;
+    }
+    .list-uno{
+        flex-direction: column;
+        li{
+          padding: 5px;
+        }
+    }
+    .list-dos{
+      margin: 10px 0 0 0;
+      
+    }
+    
+  
+    
+    .boton{
+       visibility: visible;
+       i{
+         color: rgb(0, 0, 0);
+         font-size: 25px;
+         
+       }
+    }}
+
+    @media (min-width: 320px) and (max-width: 480px){
+      nav{
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width:100%;
+        height: 50px;
+        background-color: white;
+        
+        
+        
+        
+    }
+    .bloqueUno{
+     padding:0 5% 2% 5%;
+     position: relative;
+         top: 5px;
+         img{
+           width: 100px;
+         }
+    }
+    .bloqueDos{
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+        position: relative;
+        top: -2px;
+        transition: .5s ease-in-out;
+        z-index: -1;
+        border-top: 1px solid #ccc;
+        
+        
+    }
+    .bloqueDos.show{
+      top: -500px;
+    }
+    .list-uno{
+        flex-direction: column;
+        li{
+          padding: 5px;
+        }
+    }
+    .list-dos{
+      margin: 10px 0 0 0;
+      
+    }
+    
+  
+    
+    .boton{
+       visibility: visible;
+       i{
+         color: rgb(0, 0, 0);
+         font-size: 15px;
+         
+       }
+    }
+    }
